@@ -14,4 +14,4 @@ int main()
     printf("%d",sayi3);
 
     return 0;
-}
+}  
