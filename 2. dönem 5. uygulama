@@ -1,0 +1,46 @@
+//      Muhammed Taha Metin 190201023
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+AsalMi(int sayi)
+{
+    int c;
+
+    for (c = 2; c <= sayi - 1; c++)
+    {
+        if (sayi%c == 0)
+            return 0;
+    }
+    if (c == sayi)
+        return 1;
+}
+
+int main()
+{
+    int i;
+    float j;
+    char dizi[100];
+    for (i = 1 ; i < 101 ; i++)
+    {
+        if(i!=1 && AsalMi(i))     //Asal sayılar için; | sayının karesi alınır |>>|sayının karesi alınır|
+        {
+            sprintf(dizi,"| %3d(asal)| ...^^... |%5d|..>>..|%10.4f|",i,i*i,(float)i*(float)i);
+            puts(dizi);
+        }
+        else if(i%2==0)           //Çift sayılar için; | sayının iki katı alınır |>>|sayının iki katı alınır|
+        {
+            sprintf(dizi,"| %3d(cift)| ...><... |%5d|..>>..|%10.3f|",i,i*2,(float)i*2);
+            puts(dizi);
+        }
+        else if(i%2==1)           //Tek sayılar için; | sayının yarısı alınır |>>|sayının yarısı alınır|
+        {
+            sprintf(dizi,"| %3d(tek )| ...//... |%5d|..>>..|%10.2f|",i,i/2,(float)i/2);
+            puts(dizi);
+        }
+    }
+
+    return 0;
+}
