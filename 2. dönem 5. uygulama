@@ -1,5 +1,3 @@
-//      Muhammed Taha Metin 190201023
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,25 +20,18 @@ int main()
 {
     int i;
     float j;
-    char dizi[100];
+    char dizi[1000000];
     for (i = 1 ; i < 101 ; i++)
     {
-        if(i!=1 && AsalMi(i))     //Asal sayılar için; | sayının karesi alınır |>>|sayının karesi alınır|
-        {
-            sprintf(dizi,"| %3d(asal)| ...^^... |%5d|..>>..|%10.4f|",i,i*i,(float)i*(float)i);
-            puts(dizi);
-        }
-        else if(i%2==0)           //Çift sayılar için; | sayının iki katı alınır |>>|sayının iki katı alınır|
-        {
-            sprintf(dizi,"| %3d(cift)| ...><... |%5d|..>>..|%10.3f|",i,i*2,(float)i*2);
-            puts(dizi);
-        }
-        else if(i%2==1)           //Tek sayılar için; | sayının yarısı alınır |>>|sayının yarısı alınır|
-        {
-            sprintf(dizi,"| %3d(tek )| ...//... |%5d|..>>..|%10.2f|",i,i/2,(float)i/2);
-            puts(dizi);
-        }
-    }
+        if(i!=1 && AsalMi(i))     //Asal sayýlar için; | sayýnýn karesi alýnýr |>>|sayýnýn karesi alýnýr|
+            sprintf(dizi+strlen(dizi),"| %3d(asal)| ...^^... |%5d|..>>..|%10.4f|\n",i,i*i,(float)i*(float)i);
 
+        else if(i%2==0)           //Çift sayýlar için; | sayýnýn iki katý alýnýr |>>|sayýnýn iki katý alýnýr|
+            sprintf(dizi+strlen(dizi),"| %3d(cift)| ...><... |%5d|..>>..|%10.3f|\n",i,i*2,(float)i*2);
+
+        else if(i%2==1)           //Tek sayýlar için; | sayýnýn yarýsý alýnýr |>>|sayýnýn yarýsý alýnýr|
+            sprintf(dizi+strlen(dizi),"| %3d(tek )| ...//... |%5d|..>>..|%10.2f|\n",i,i/2,(float)i/2);
+    }
+    puts(dizi);
     return 0;
 }
