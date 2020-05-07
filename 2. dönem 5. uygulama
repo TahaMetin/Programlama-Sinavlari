@@ -20,7 +20,7 @@ int main()
 {
     int i;
     float j;
-    char dizi[1000000];
+    char dizi[4801];
     for (i = 1 ; i < 101 ; i++)
     {
         if(i!=1 && AsalMi(i))     //Asal sayýlar için; | sayýnýn karesi alýnýr |>>|sayýnýn karesi alýnýr|
@@ -33,5 +33,6 @@ int main()
             sprintf(dizi+strlen(dizi),"| %3d(tek )| ...//... |%5d|..>>..|%10.2f|\n",i,i/2,(float)i/2);
     }
     puts(dizi);
+    //printf("%d",strlen(dizi));  --> 4800
     return 0;
 }
