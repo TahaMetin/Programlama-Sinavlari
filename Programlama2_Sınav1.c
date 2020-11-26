@@ -1,7 +1,7 @@
-Question:
-Make a program in C language for create a random matrix and find out its nilpotent matrix or not.
+//Question:
+//Make a program in C language for create a random matrix and find out its nilpotent matrix or not.
 
-Answer:
+//Answer:
 
 #include <stdio.h>
 #include <stdlib.h>

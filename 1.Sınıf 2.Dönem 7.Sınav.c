@@ -1,4 +1,4 @@
-// Muhammed Taha Metin 190201023
+
 
 #include <stdio.h>
 #include <stdlib.h>
